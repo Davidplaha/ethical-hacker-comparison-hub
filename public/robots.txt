@@ -1,0 +1,19 @@
+# Robots.txt for EthicalHackerHub
+# https://ethicalhackerhub.com
+
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block unnecessary paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Sitemap
+Sitemap: https://ethicalhackerhub.com/sitemap.xml
