@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Button from './Button';
 import type { Platform } from '@/data/platforms';
 
@@ -15,10 +16,10 @@ function StarRating({ rating }: { rating: number }) {
                 <svg
                     key={i}
                     className={`w-5 h-5 ${i < fullStars
+                        ? 'text-yellow-400'
+                        : i === fullStars && hasHalfStar
                             ? 'text-yellow-400'
-                            : i === fullStars && hasHalfStar
-                                ? 'text-yellow-400'
-                                : 'text-gray-300'
+                            : 'text-gray-300'
                         }`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
@@ -31,15 +32,32 @@ function StarRating({ rating }: { rating: number }) {
     );
 }
 
+// Check if logo exists (has actual file extension)
+function hasActualLogo(logo: string): boolean {
+    return logo.endsWith('.png') || logo.endsWith('.jpg') || logo.endsWith('.jpeg') || logo.endsWith('.webp');
+}
+
 export default function PlatformCard({ platform }: PlatformCardProps) {
+    const showImage = hasActualLogo(platform.logo);
+
     return (
         <div className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg hover:border-blue-200 transition-all duration-300 flex flex-col h-full">
             {/* Header */}
             <div className="flex items-start justify-between mb-4">
-                <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
+                <div className="w-14 h-14 bg-gray-900 rounded-xl flex items-center justify-center overflow-hidden">
+                    {showImage ? (
+                        <Image
+                            src={platform.logo}
+                            alt={`${platform.name} logo`}
+                            width={56}
+                            height={56}
+                            className="w-full h-full object-cover"
+                        />
+                    ) : (
+                        <svg className="w-8 h-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    )}
                 </div>
                 <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
                     {platform.serviceType}

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Button from './Button';
 import type { Platform } from '@/data/platforms';
 
@@ -5,16 +6,33 @@ interface PlatformSectionProps {
     platform: Platform;
 }
 
+// Check if logo exists (has actual file extension)
+function hasActualLogo(logo: string): boolean {
+    return logo.endsWith('.png') || logo.endsWith('.jpg') || logo.endsWith('.jpeg') || logo.endsWith('.webp');
+}
+
 export default function PlatformSection({ platform }: PlatformSectionProps) {
+    const showImage = hasActualLogo(platform.logo);
+
     return (
         <article id={platform.id} className="py-12 border-b border-gray-100 last:border-b-0">
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <svg className="w-10 h-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
+                    <div className="w-16 h-16 bg-gray-900 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden">
+                        {showImage ? (
+                            <Image
+                                src={platform.logo}
+                                alt={`${platform.name} logo`}
+                                width={64}
+                                height={64}
+                                className="w-full h-full object-cover"
+                            />
+                        ) : (
+                            <svg className="w-10 h-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        )}
                     </div>
                     <div>
                         <h3 className="text-2xl font-bold text-gray-900">{platform.name}</h3>

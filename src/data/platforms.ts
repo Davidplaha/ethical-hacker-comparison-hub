@@ -19,7 +19,7 @@ export const platforms: Platform[] = [
     id: "spywizards",
     name: "SpyWizards",
     tagline: "Best for Monitoring & Consent-Based Tools",
-    logo: "/platforms/spywizards.svg",
+    logo: "/platforms/spywizards.png",
     rating: 4.8,
     description: "SpyWizards is positioned as a monitoring and cybersecurity solutions platform rather than a freelance marketplace. It focuses on software-based tools and managed services designed for ethical use. SpyWizards emphasizes consent-based monitoring, which means the device owner or legal guardian must authorize usage. Instead of hiring an individual hacker, users get structured software solutions backed by customer support and documentation.",
     features: [
