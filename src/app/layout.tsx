@@ -31,6 +31,12 @@ export const metadata: Metadata = {
     "hire hacker online",
     "legal hacker services"
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.svg",
+  },
   authors: [{ name: "EthicalHackerHub" }],
   creator: "EthicalHackerHub",
   publisher: "EthicalHackerHub",
