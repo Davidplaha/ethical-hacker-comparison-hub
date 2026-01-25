@@ -40,16 +40,16 @@ export const metadata: Metadata = {
   authors: [{ name: "EthicalHackerHub" }],
   creator: "EthicalHackerHub",
   publisher: "EthicalHackerHub",
-  metadataBase: new URL("https://ethicalhackerhub.com"),
+  metadataBase: new URL("https://www.ethicalhackers.us.com"),
   alternates: {
-    canonical: "https://ethicalhackerhub.com",
+    canonical: "https://www.ethicalhackers.us.com",
   },
   openGraph: {
     title: "Hire a Hacker | Best Ethical Hacker Services 2026",
     description: "Compare the top ethical hacker services. Find trusted professionals for penetration testing, security audits, and cybersecurity solutions. 100% legal & verified platforms.",
     type: "website",
     locale: "en_US",
-    url: "https://ethicalhackerhub.com",
+    url: "https://www.ethicalhackers.us.com",
     siteName: "EthicalHackerHub",
     images: [
       {
@@ -108,13 +108,13 @@ function generateWebsiteSchema() {
     "name": "EthicalHackerHub",
     "alternateName": "Ethical Hacker Hub",
     "description": "Compare the best ethical hacker services. Find trusted professionals to hire a hacker for penetration testing, security audits, and cybersecurity solutions.",
-    "url": "https://ethicalhackerhub.com",
+    "url": "https://www.ethicalhackers.us.com",
     "inLanguage": "en-US",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://ethicalhackerhub.com/?q={search_term_string}"
+        "urlTemplate": "https://www.ethicalhackers.us.com/?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -128,8 +128,8 @@ function generateOrganizationSchema() {
     "@type": "Organization",
     "name": "EthicalHackerHub",
     "alternateName": "Ethical Hacker Hub",
-    "url": "https://ethicalhackerhub.com",
-    "logo": "https://ethicalhackerhub.com/logo.png",
+    "url": "https://www.ethicalhackers.us.com",
+    "logo": "https://www.ethicalhackers.us.com/logo.png",
     "description": "Your trusted resource to hire a hacker for ethical cybersecurity services. Compare verified platforms for penetration testing, security audits, and monitoring solutions.",
     "foundingDate": "2024",
     "sameAs": [
@@ -139,7 +139,7 @@ function generateOrganizationSchema() {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "contact@ethicalhackerhub.com",
+      "email": "contact@ethicalhackers.us.com",
       "contactType": "customer service",
       "availableLanguage": "English"
     }
@@ -153,12 +153,12 @@ function generateWebPageSchema() {
     "@type": "WebPage",
     "name": "Hire a Hacker | Best Ethical Hacker Services 2026",
     "description": "Compare the best ethical hacker services. Find trusted professionals to hire a hacker for penetration testing, security audits, and cybersecurity solutions.",
-    "url": "https://ethicalhackerhub.com",
+    "url": "https://www.ethicalhackers.us.com",
     "inLanguage": "en-US",
     "isPartOf": {
       "@type": "WebSite",
       "name": "EthicalHackerHub",
-      "url": "https://ethicalhackerhub.com"
+      "url": "https://www.ethicalhackers.us.com"
     },
     "about": {
       "@type": "Thing",
@@ -246,13 +246,13 @@ function generateBreadcrumbSchema() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://ethicalhackerhub.com"
+        "item": "https://www.ethicalhackers.us.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Hire a Hacker",
-        "item": "https://ethicalhackerhub.com/#compare"
+        "item": "https://www.ethicalhackers.us.com/#compare"
       }
     ]
   };

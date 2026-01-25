@@ -69,7 +69,7 @@ export default function FAQAccordion() {
                         We&apos;re here to help you find the right ethical hacker service.
                     </p>
                     <a
-                        href="mailto:contact@ethicalhackerhub.com"
+                        href="mailto:contact@ethicalhackers.us.com"
                         className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-700 transition-colors"
                     >
                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

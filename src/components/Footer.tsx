@@ -56,10 +56,10 @@ export default function Footer() {
                             Have questions about ethical hacking services?
                         </p>
                         <a
-                            href="mailto:contact@ethicalhackerhub.com"
+                            href="mailto:contact@ethicalhackers.us.com"
                             className="text-blue-400 hover:text-blue-300 transition-colors"
                         >
-                            contact@ethicalhackerhub.com
+                            contact@ethicalhackers.us.com
                         </a>
                     </div>
                 </div>
